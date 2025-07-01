@@ -1,4 +1,7 @@
-div id="#{dom_id quote}"
-  p
-    strong Name:
-    = link_to quote.name, quote
+= turbo_frame_tag quote do
+  div.quote id="#{dom_id quote}"
+    span
+      = link_to quote.name, quote, data: { turbo_frame: "_top" }
+    .quote__actions
+      = link_to "Edit", edit_quote_path(quote), class: "btn"
+      = button_to "Delete", quote, method: :delete, class: "btn btn--destructive"

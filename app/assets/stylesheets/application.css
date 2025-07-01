@@ -1,10 +1,42 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+@import 'https://cdn.jsdelivr.net/npm/@rolemodel/optics/dist/css/optics.min.css';
+
+.homepage {
+  display: grid;
+  gap: var(--op-space-large);
+
+  padding-block: var(--op-space-large);
+
+  .homepage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-block: var(--op-space-medium);
+
+    box-shadow: var(--op-border-bottom) var(--op-color-border);
+  }
+}
+
+.quotes {
+  display: grid;
+  gap: var(--op-space-large);
+}
+
+.quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--op-space-medium);
+
+  box-shadow: var(--op-border-all) var(--op-color-border);
+
+  a {
+    color: var(--op-color-primary-on-plus-max);
+  }
+
+  .quote__actions {
+    display: flex;
+    gap: var(--op-space-small);
+  }
+}

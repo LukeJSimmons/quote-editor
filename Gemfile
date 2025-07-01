@@ -55,6 +55,10 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "rolemodel_rails", github: "RoleModel/rolemodel_rails"
+
+  gem "factory_bot_rails"
+
+  gem "rspec-rails"
 end
 
 group :development do
@@ -63,24 +67,9 @@ group :development do
 end
 
 group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
-end
-
-group :development, :test do
-  gem "factory_bot_rails"
-end
-
-group :development, :test do
-  gem "rspec-rails"
-end
-
-group :test do
-  gem "capybara"
-  gem "webdrivers"
-end
-
-group :test do
   gem "test-prof"
 end
+
+gem "slim", "~> 5.2"

@@ -1,6 +1,7 @@
 h1 Edit quote
 
-== render "form", quote: @quote
+= turbo_frame_tag @quote do
+  == render "form", quote: @quote
 
 br
 

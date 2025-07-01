@@ -1,10 +1,6 @@
-p style="color: green" = notice
+span style="color: green" = notice
 
 == render @quote
 
 div
-  => link_to "Edit", edit_quote_path(@quote)
-  '|
-  =< link_to "Back to quotes", quotes_path
-
-  = button_to "Delete", @quote, method: :delete
+  = link_to "Back to quotes", quotes_path

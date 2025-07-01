@@ -1,9 +1,13 @@
-p style="color: green" = notice
+span style="color: green" = notice
 
-h1 Quotes
+.homepage
+  .homepage__header
+    h1 Quotes
+    = link_to "New quote", new_quote_path, class: "btn btn--primary", data: { turbo_frame: dom_id(Quote.new) }
 
-#quotes
-  - @quotes.each do |quote|
-    == render quote
+  = turbo_frame_tag Quote.new
 
-= link_to "New quote", new_quote_path
+  = turbo_frame_tag "quotes", class: "quotes" do
+    - @quotes.each do |quote|
+      == render quote
+
