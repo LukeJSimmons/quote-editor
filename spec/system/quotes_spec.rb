@@ -14,6 +14,9 @@ RSpec.describe 'quotes', type: :system, js: true do
   describe 'showing a quote' do
     before do
       visit quotes_path
+      click_on "New quote"
+      fill_in "Name", with: quote.name
+      click_on "Create quote"
       click_on quote.name
     end
 
@@ -43,6 +46,9 @@ RSpec.describe 'quotes', type: :system, js: true do
   describe 'updating a quote' do
     before do
       visit quotes_path
+      click_on "New quote"
+      fill_in "Name", with: quote.name
+      click_on "Create quote"
       click_on "Edit", match: :first
     end
 
@@ -61,6 +67,9 @@ RSpec.describe 'quotes', type: :system, js: true do
   describe 'destroying a quote' do
     before do
       visit quotes_path
+      click_on "New quote"
+      fill_in "Name", with: quote.name
+      click_on "Create quote"
     end
 
     it 'deletes quote' do
