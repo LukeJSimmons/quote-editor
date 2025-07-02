@@ -19,7 +19,7 @@ gem "jbuilder"
 
 gem "slim-rails"
 
-gem "simple_form", "~> 5.1.0"
+gem "simple_form", "~> 5.3.1"
 
 gem "devise", "~> 4.9.3"
 
