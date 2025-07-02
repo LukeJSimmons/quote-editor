@@ -117,3 +117,24 @@
     }
   }
 }
+
+.line-item-date {
+  margin-top: var(--op-space-x-large);
+  margin-bottom: var(--op-space-2x-small);
+  
+  .line-item-date__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--op-space-x-small);
+  }
+
+  .line-item-date__title {
+    font-size: var(--op-font-x-large);
+  }
+
+  .line-item-date__actions {
+    display: flex;
+    gap: var(--op-space-x-small);
+  }
+}

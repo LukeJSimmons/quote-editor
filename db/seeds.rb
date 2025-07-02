@@ -14,3 +14,5 @@ Company.create(name: "PWC")
 User.create(email: "accountant@kpmg.com", password: "password", company_id: 4)
 User.create(email: "manager@kpmg.com", password: "password", company_id: 4)
 User.create(email: "eavesdropper@pwc.com", password: "password", company_id: 5)
+
+LineItemDate.create(date: Date.current, quote_id: 7)
