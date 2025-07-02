@@ -1,7 +1,15 @@
 require 'rails_helper'
+include Warden::Test::Helpers
 
 RSpec.describe 'quotes', type: :system, js: true do
-  let!(:quote) { create(:quote) }
+  let(:company) { create(:company) }
+  let!(:user) { create(:user) }
+  let!(:quote) { create(:quote, company: company) }
+
+  before do
+    login_as user
+  end
+
 
   describe 'showing a quote' do
     before do

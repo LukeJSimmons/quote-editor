@@ -9,4 +9,9 @@ html
     meta content="width=device-width, initial-scale=1" name="viewport"
   body.app-body
     .app__content
+      = render "layouts/navbar"
+
+      .flash#flash
+        = render "layouts/flash"
+
       = yield

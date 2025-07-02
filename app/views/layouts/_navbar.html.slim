@@ -1,0 +1,7 @@
+header.navigation 
+  - if user_signed_in?
+    .navigation__brand = current_company.name
+    .navigation__name = current_user.name
+    = button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn"
+  - else 
+    = link_to "Sign in", new_user_session_path, class: "btn navigation__right"
