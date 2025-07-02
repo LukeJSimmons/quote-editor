@@ -5,10 +5,10 @@
       ul
         - quote.errors.each do |error|
           li = error.full_message
-  .quote.quote--edit
+  .quote
     div
       = form.label :name, style: "display: block"
       = form.text_field :name
-
     div
       = form.submit class: "btn btn--primary"
+      = link_to "Cancel", quotes_path, class: "btn"
