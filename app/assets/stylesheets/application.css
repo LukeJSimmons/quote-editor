@@ -96,3 +96,24 @@
     opacity:1
   }
 }
+
+.empty-state {
+  padding: var(--op-space-medium);
+  border: var(--op-border-width);
+  border-style: dashed;
+  text-align: center;
+
+  .empty-state__text {
+    font-size: var(--op-font-large);
+    margin-bottom: var(--op-space-large);
+    font-weight: bold;
+  }
+
+  &.empty-state--only-child {
+    display: none;
+
+    &:only-child {
+      display: revert;
+    }
+  }
+}

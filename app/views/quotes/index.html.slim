@@ -8,6 +8,6 @@
   = turbo_frame_tag Quote.new
 
   = turbo_frame_tag "quotes", class: "quotes" do
-    - @quotes.each do |quote|
-      == render quote
+    = render 'quotes/empty_state'
+    == render @quotes
 
