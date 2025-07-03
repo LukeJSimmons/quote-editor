@@ -8,11 +8,16 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Company.create(name: "KPMG")
-Company.create(name: "PWC")
+quote = Quote.create(name: "quote")
 
-User.create(email: "accountant@kpmg.com", password: "password", company_id: 4)
-User.create(email: "manager@kpmg.com", password: "password", company_id: 4)
-User.create(email: "eavesdropper@pwc.com", password: "password", company_id: 5)
+kpmg = Company.create(name: "KPMG")
+pwc = Company.create(name: "PWC")
 
-LineItemDate.create(date: Date.current, quote_id: 7)
+User.create(email: "accountant@kpmg.com", password: "password", company_id: kpmg.id)
+User.create(email: "manager@kpmg.com", password: "password", company_id: kpmg.id)
+User.create(email: "eavesdropper@pwc.com", password: "password", company_id: pwc.id)
+
+date = LineItemDate.create(date: Date.current, quote_id: quote.id)
+
+LineItem.create(line_item_date_id: date.id, name: "meeting room", description: "info", quantity: 1, unit_price: 1000)
+LineItem.create(line_item_date_id: date.id, name: "catering", description: "info", quantity: 10, unit_price: 25)
