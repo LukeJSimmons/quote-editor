@@ -2,6 +2,8 @@ require 'rails_helper'
 include Warden::Test::Helpers
 
 RSpec.describe "line_item_dates", type: :system, js: true do
+  include ActionView::Helpers::NumberHelper
+
   let!(:company) { create(:company) }
   let!(:user) { create(:user) }
   let!(:quote) { create(:quote, company: company) }
@@ -64,6 +66,10 @@ RSpec.describe "line_item_dates", type: :system, js: true do
         click_on "Delete"
       end
       expect(page).to have_no_content(I18n.l(Date.current + 1.day, format: :long))
+    end
+
+    it 'updates total price' do
+      expect(page).to have_content(number_to_currency(quote.total_price))
     end
   end
 end

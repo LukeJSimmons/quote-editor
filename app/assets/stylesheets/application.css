@@ -1,5 +1,6 @@
 @import 'https://cdn.jsdelivr.net/npm/@rolemodel/optics/dist/css/optics.min.css';
 
+
 .homepage {
   display: grid;
   gap: var(--op-space-large);
@@ -216,5 +217,25 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+  }
+}
+
+.quote-total {
+  position: fixed;
+  bottom: 0;
+  width: 65%;
+  background-color: var(--op-color-background);
+
+  font-size: var(--op-font-x-large);
+  font-weight: bold;
+
+  padding-top: var(--op-space-x-small);
+  padding-bottom: var(--op-space-x-small);
+
+  .quote-total__inner {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }

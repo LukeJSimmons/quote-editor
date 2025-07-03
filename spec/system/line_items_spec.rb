@@ -33,6 +33,10 @@ RSpec.describe 'line_items', type: :system, js: true do
       click_on "Create item"
       expect(page).to have_content(line_item.name)
     end
+
+    it 'updates total price' do
+      expect(page).to have_content(number_to_currency(quote.total_price))
+    end
   end
 
   describe 'updating a line item' do
@@ -52,6 +56,10 @@ RSpec.describe 'line_items', type: :system, js: true do
       click_on "Update item"
       expect(page).to have_content("New name")
     end
+
+    it 'updates total price' do
+      expect(page).to have_content(number_to_currency(quote.total_price))
+    end
   end
 
   describe 'destroying a line item' do
@@ -67,6 +75,10 @@ RSpec.describe 'line_items', type: :system, js: true do
       within "##{dom_id(line_item_date)}" do
         expect(page).to have_no_content(line_item.name)
       end
+    end
+
+    it 'updates total price' do
+      expect(page).to have_content(number_to_currency(quote.total_price))
     end
   end
 end
