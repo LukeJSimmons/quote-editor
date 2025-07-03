@@ -1,0 +1,20 @@
+.quote-total {
+  position: fixed;
+  bottom: 0;
+  width: 65%;
+  background-color: var(--op-color-background);
+  box-shadow: var(--op-border-top) var(--op-color-border);
+
+  font-size: var(--op-font-x-large);
+  font-weight: bold;
+
+  padding-top: var(--op-space-x-small);
+  padding-bottom: var(--op-space-x-small);
+
+  .quote-total__inner {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

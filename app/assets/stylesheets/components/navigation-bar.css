@@ -1,0 +1,23 @@
+.navigation-bar {
+  display: flex;
+  align-items: center;
+  padding: var(--op-space-x-small) var(--op-space-medium);
+  margin-bottom: var(--op-space-2x-large);
+
+  box-shadow: var(--op-border-bottom) var(--op-color-border);
+
+  .navigation-bar__brand {
+    font-weight: var(--op-font-weight-bold);
+    font-size: var(--op-font-x-large);
+  }
+
+  .navigation-bar__name {
+    font-weight: var(--op-font-weight-bold);
+    margin-left: auto;
+    margin-right: var(--op-space-small);
+  }
+
+  .navigation-bar__right {
+    margin-left: auto;
+  }
+}

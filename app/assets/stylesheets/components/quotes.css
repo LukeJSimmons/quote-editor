@@ -1,0 +1,23 @@
+.quotes {
+  display: grid;
+  gap: var(--op-space-large);
+}
+
+.quote {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: var(--op-space-medium);
+
+  box-shadow: var(--op-border-all) var(--op-color-border);
+
+  a {
+    color: var(--op-color-primary-on-plus-max);
+  }
+
+  .quote__actions {
+    display: flex;
+    gap: var(--op-space-small);
+  }
+}

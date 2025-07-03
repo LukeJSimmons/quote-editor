@@ -1,0 +1,16 @@
+.homepage {
+  display: grid;
+  gap: var(--op-space-large);
+
+  padding-block: var(--op-space-large);
+
+  .homepage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-block: var(--op-space-medium);
+
+    box-shadow: var(--op-border-bottom) var(--op-color-border);
+  }
+}
