@@ -1,0 +1,4 @@
+.error-message {
+  color: var(--op-color-alerts-danger-minus-six);
+  font-weight: var(--op-font-weight-bold);
+}

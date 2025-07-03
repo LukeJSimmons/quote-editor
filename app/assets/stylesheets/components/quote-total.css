@@ -8,8 +8,7 @@
   font-size: var(--op-font-x-large);
   font-weight: bold;
 
-  padding-top: var(--op-space-x-small);
-  padding-bottom: var(--op-space-x-small);
+  padding-block: var(--op-space-medium);
 
   .quote-total__inner {
     margin: 0;

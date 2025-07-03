@@ -12,7 +12,10 @@
 
   box-shadow: var(--op-border-all) var(--op-color-border);
 
-  a {
+  border-radius: var(--op-radius-medium);
+
+  .quote__title {
+    font-size: var(--op-font-large);
     color: var(--op-color-primary-on-plus-max);
   }
 

@@ -1,6 +1,8 @@
 = simple_form_for [quote, line_item_date], html: { class: "form line-item-date" } do |f|
   = form_error_notification(line_item_date)
   
-  = f.input :date, html5: true, input_html: { autofocus: true }
-  = link_to "Cancel", quote_path(quote), class: "btn"
-  = f.submit class: "btn"
+  .line-item-date__header
+    = f.input :date, html5: true, input_html: { autofocus: true }
+    .line-item-date__actions
+      = f.submit class: "btn btn--primary"
+      = link_to "Cancel", quote_path(quote), class: "btn"

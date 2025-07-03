@@ -7,6 +7,11 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--op-space-x-small);
+    border-radius: var(--op-radius-medium);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: var(--op-border-all) var(--op-color-border);
+    padding: var(--op-space-small);
   }
 
   .line-item-date__title {
@@ -21,15 +26,16 @@
   .line-item-date__body {
     box-shadow: var(--op-border-all) var(--op-color-border);
     border-radius: var(--op-radius-medium);
-    margin-top: var(--op-space-x-small);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
     padding: var(--op-space-small);
-    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .line-item-date__footer {
-    border: dashed 2px var(--op-color-white);
+    border: dashed 2px var(--op-color-neutral-minus-max);
     border-radius: var(--op-radius-medium);
     text-align: center;
-    padding: var(--op-space-2x-small);
+    padding-block: var(--op-space-small);
   }
 }

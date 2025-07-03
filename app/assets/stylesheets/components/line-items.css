@@ -1,0 +1,9 @@
+.line-items {
+  > * {
+    &:last-child {
+      > * {
+        padding-bottom: var(--op-space-large);
+      }
+    }
+  }
+}

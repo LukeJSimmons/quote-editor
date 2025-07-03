@@ -4,8 +4,8 @@
   align-items: center;
 
   gap: var(--op-space-x-small);
-  margin-bottom: var(--op-space-small);
   padding: var(--op-space-x-small);
+  margin-top: var(--op-space-small);
   box-shadow: var(--op-border-bottom) var(--op-color-border);
 
   > * {
@@ -40,10 +40,11 @@
     flex: 1 1 auto;
   }
 
-  .line-item--form {
+  &.line-item--form {
+    .line-item__name,
     .line-item__quantity,
     .line-item__price {
-      display: block;
+      display: grid;
     }
 
     .line-item__description {
@@ -52,6 +53,7 @@
   }
 
   &.line-item--header {
+    margin-top: 0;
     margin-bottom: var(--op-space-small);
 
     > * {
